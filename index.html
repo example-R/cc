@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html style="background-color: black;" lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400">
+    </head>
+    <body>
+        <header>
+            <h2 style="font-size:80px; ">El meu calendari</h2>
+        </header>
+        <br><br><br>
+        <button class="glow-on-hover"  style="border-radius:5px; height:100px; width: 500px; font-size: 80px" onclick="AgileBoard('.container').create();swal('Estem intentant afegir web storage, mentrestant la informació es guarda a el ordinador.')">Obrir</button>
+
+        <div class="container"></div>
+
+        <script type="text/javascript" src="./agileBoard.js"></script>
+        <script type="text/javascript">
+            alert("Estem intentant utilitzar web storage, mentrestant utilitzem localStorage.")
+            var data = {
+                project: {
+                    name: "JavaScript",
+                    abbreviature: "JS-COMP"
+                },
+                stages: [
+                    'Dilluns',
+                    "Dimarts",
+                    "Dimecres",
+                    "Dijous",
+                    "Divendres",
+                    "Festa"
+                ],
+                stagesColors: [
+                    'white',
+                    'orange',
+                    "#81abff",
+                    "yellow",
+                    "yellowgreen",
+                    "red"
+                ],
+                tasks: [
+                ]
+            }
+        </script>
+    </body>
+</html>
