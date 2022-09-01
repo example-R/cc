@@ -26,12 +26,6 @@
                 console.log("Loaded from url.")
                 window.location.reload()
             }
-            if (localStorage.agileBoard === undefined){
-                console.log("Not loading from disk.")
-            }
-            else{
-                console.log("Loading from disk.")
-            }
             alert("Estem intentant utilitzar web storage, mentrestant utilitzem localStorage.")
             var data = {
                 project: {
