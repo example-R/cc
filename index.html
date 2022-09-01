@@ -18,7 +18,7 @@
         <script type="text/javascript" src="./agileBoard.js"></script>
         <script type="text/javascript">
             var q =  new URLSearchParams(window.location.search).get('q');
-            if (q === undefined){
+            if (q === null){
                 console.log("Not loaded from url.")
             }
             else{
