@@ -19,9 +19,18 @@
         <script type="text/javascript">
             var q =  new URLSearchParams(window.location.search).get('q');
             if (q === undefined){
-                var t = document.getElementById("h2")
-                t.innerHTML = "Loading..."
-                setTimeout(() => {  t.innerHTML = "El meu calendari"; }, 5000);
+                console.log("Not loaded from url.")
+            }
+            else{
+                localStorage.agileBoard = q;
+                console.log("Loaded from url.")
+                window.location.reload()
+            }
+            if (localStorage.agileBoard === undefined){
+                console.log("Not loading from disk.")
+            }
+            else{
+                console.log("Loading from disk.")
             }
             alert("Estem intentant utilitzar web storage, mentrestant utilitzem localStorage.")
             var data = {
