@@ -8,7 +8,7 @@
     </head>
     <body>
         <header>
-            <h2 style="font-size:80px; ">El meu calendari</h2>
+            <h2 id="h2" style="font-size:80px; ">El meu calendari</h2>
         </header>
         <br><br><br>
         <button class="glow-on-hover"  style="border-radius:5px; height:100px; width: 500px; font-size: 80px" onclick="AgileBoard('.container').create();swal('Estem intentant afegir web storage, mentrestant la informació es guarda a el ordinador.')">Obrir</button>
@@ -17,6 +17,12 @@
 
         <script type="text/javascript" src="./agileBoard.js"></script>
         <script type="text/javascript">
+            var q =  new URLSearchParams(window.location.search).get('q');
+            if (q === undefined){
+                var t = document.getElementById("h2")
+                t.innerHTML = "Loading..."
+                setTimeout(() => {  t.innerHTML = "El meu calendari"; }, 5000);
+            }
             alert("Estem intentant utilitzar web storage, mentrestant utilitzem localStorage.")
             var data = {
                 project: {
